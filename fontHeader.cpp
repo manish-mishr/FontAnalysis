@@ -49,9 +49,9 @@ vector<int> kfold(const int size,const int k, vector<int> &trainInd,vector<int> 
     return move(indices);
 }
 
-short* getLabel(const vector<int> &data, const vector<string> &files){
+void getLabel(const vector<int> &data, const vector<string> &files, Mat& inputMat){
     int size = data.size();
-    short* labels = new short[size];
+
 
     for(int i=0; i<data.size(); ++i){
 
@@ -60,32 +60,43 @@ short* getLabel(const vector<int> &data, const vector<string> &files){
 
 
             if(val%2 == 0)
-                labels[i] = 1;
+                inputMat.at<int>(i) = 1;
             else
-                labels[i] = -1;
+                inputMat.at<int>(i) = -1;
 
         }
-    return move(labels);
+
 }
 
-float** getData(const vector<string> &files, const vector<int> &indices){
+void getData(const vector<string> &files, const vector<int> &indices, Mat &inputMat){
+
     int sz = indices.size();
-    float** arr = new float*[sz];
-    for(int i=0; i<sz; ++i)
-        arr[i] = new float[AREA];
-
-
 
     for(int itr=0; itr<sz; ++itr){
         auto ind = indices[itr];
         string fp = TRAINPATH + files[ind];
-        Mat img = imread(fp,0);
+        Mat grey = imread(fp,CV_LOAD_IMAGE_GRAYSCALE);
+        Mat img;
+        grey.convertTo(img,CV_32FC1);
 
         for(int i=0; i<WIDTH; ++i)
             for(int j =0; j<WIDTH; ++j)
-                arr[itr][i*WIDTH+j] = static_cast<float>(img.at<uchar>(i,j));
+               inputMat.at<float>(itr,i*WIDTH+j) = img.at<float>(i,j);
     }
 
-
-    return arr;
 }
+
+void SVMevaluate(Mat &testResponse, float &count, float &accuracy, Mat &testLabels) {
+    int dummy;
+    for (int i = 0; i<testResponse.rows; i++)
+    {
+//        cout << testResponse.at<float>(i,0) << " " << testLabels.at<int>(i,0) << endl;
+        if (testResponse.at<float>(i, 0) == testLabels.at<int>(i,0)) {
+
+            count = count + 1;
+        }
+
+    }
+    accuracy = (count / testResponse.rows) * 100;
+}
+

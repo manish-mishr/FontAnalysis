@@ -86,6 +86,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/manish/ClionProjects/DataSetManager.cpp">
+			<Option target="ClionProjects"/>
+		</Unit>
+		<Unit filename="/home/manish/ClionProjects/HogFeature.cpp">
+			<Option target="ClionProjects"/>
+		</Unit>
 		<Unit filename="/home/manish/ClionProjects/fontHeader.cpp">
 			<Option target="ClionProjects"/>
 		</Unit>

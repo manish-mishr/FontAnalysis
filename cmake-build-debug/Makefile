@@ -123,6 +123,60 @@ ClionProjects/fast:
 	$(MAKE) -f CMakeFiles/ClionProjects.dir/build.make CMakeFiles/ClionProjects.dir/build
 .PHONY : ClionProjects/fast
 
+DataSetManager.o: DataSetManager.cpp.o
+
+.PHONY : DataSetManager.o
+
+# target to build an object file
+DataSetManager.cpp.o:
+	$(MAKE) -f CMakeFiles/ClionProjects.dir/build.make CMakeFiles/ClionProjects.dir/DataSetManager.cpp.o
+.PHONY : DataSetManager.cpp.o
+
+DataSetManager.i: DataSetManager.cpp.i
+
+.PHONY : DataSetManager.i
+
+# target to preprocess a source file
+DataSetManager.cpp.i:
+	$(MAKE) -f CMakeFiles/ClionProjects.dir/build.make CMakeFiles/ClionProjects.dir/DataSetManager.cpp.i
+.PHONY : DataSetManager.cpp.i
+
+DataSetManager.s: DataSetManager.cpp.s
+
+.PHONY : DataSetManager.s
+
+# target to generate assembly for a file
+DataSetManager.cpp.s:
+	$(MAKE) -f CMakeFiles/ClionProjects.dir/build.make CMakeFiles/ClionProjects.dir/DataSetManager.cpp.s
+.PHONY : DataSetManager.cpp.s
+
+HogFeature.o: HogFeature.cpp.o
+
+.PHONY : HogFeature.o
+
+# target to build an object file
+HogFeature.cpp.o:
+	$(MAKE) -f CMakeFiles/ClionProjects.dir/build.make CMakeFiles/ClionProjects.dir/HogFeature.cpp.o
+.PHONY : HogFeature.cpp.o
+
+HogFeature.i: HogFeature.cpp.i
+
+.PHONY : HogFeature.i
+
+# target to preprocess a source file
+HogFeature.cpp.i:
+	$(MAKE) -f CMakeFiles/ClionProjects.dir/build.make CMakeFiles/ClionProjects.dir/HogFeature.cpp.i
+.PHONY : HogFeature.cpp.i
+
+HogFeature.s: HogFeature.cpp.s
+
+.PHONY : HogFeature.s
+
+# target to generate assembly for a file
+HogFeature.cpp.s:
+	$(MAKE) -f CMakeFiles/ClionProjects.dir/build.make CMakeFiles/ClionProjects.dir/HogFeature.cpp.s
+.PHONY : HogFeature.cpp.s
+
 fontHeader.o: fontHeader.cpp.o
 
 .PHONY : fontHeader.o
@@ -186,6 +240,12 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... ClionProjects"
+	@echo "... DataSetManager.o"
+	@echo "... DataSetManager.i"
+	@echo "... DataSetManager.s"
+	@echo "... HogFeature.o"
+	@echo "... HogFeature.i"
+	@echo "... HogFeature.s"
 	@echo "... fontHeader.o"
 	@echo "... fontHeader.i"
 	@echo "... fontHeader.s"

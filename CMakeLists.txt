@@ -5,5 +5,5 @@ set(CMAKE_CXX_STANDARD 11)
 find_package( OpenCV REQUIRED )
 include_directories( ${OpenCV_INCLUDE_DIRS} )
 
-add_executable(ClionProjects main.cpp fontHeader.cpp)
+add_executable(ClionProjects main.cpp fontHeader.cpp HogFeature.cpp DataSetManager.cpp)
 target_link_libraries( ClionProjects ${OpenCV_LIBS} )

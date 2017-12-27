@@ -105,16 +105,68 @@ CMakeFiles/ClionProjects.dir/fontHeader.cpp.o.provides: CMakeFiles/ClionProjects
 CMakeFiles/ClionProjects.dir/fontHeader.cpp.o.provides.build: CMakeFiles/ClionProjects.dir/fontHeader.cpp.o
 
 
+CMakeFiles/ClionProjects.dir/HogFeature.cpp.o: CMakeFiles/ClionProjects.dir/flags.make
+CMakeFiles/ClionProjects.dir/HogFeature.cpp.o: ../HogFeature.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/manish/ClionProjects/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/ClionProjects.dir/HogFeature.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ClionProjects.dir/HogFeature.cpp.o -c /home/manish/ClionProjects/HogFeature.cpp
+
+CMakeFiles/ClionProjects.dir/HogFeature.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ClionProjects.dir/HogFeature.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/manish/ClionProjects/HogFeature.cpp > CMakeFiles/ClionProjects.dir/HogFeature.cpp.i
+
+CMakeFiles/ClionProjects.dir/HogFeature.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ClionProjects.dir/HogFeature.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/manish/ClionProjects/HogFeature.cpp -o CMakeFiles/ClionProjects.dir/HogFeature.cpp.s
+
+CMakeFiles/ClionProjects.dir/HogFeature.cpp.o.requires:
+
+.PHONY : CMakeFiles/ClionProjects.dir/HogFeature.cpp.o.requires
+
+CMakeFiles/ClionProjects.dir/HogFeature.cpp.o.provides: CMakeFiles/ClionProjects.dir/HogFeature.cpp.o.requires
+	$(MAKE) -f CMakeFiles/ClionProjects.dir/build.make CMakeFiles/ClionProjects.dir/HogFeature.cpp.o.provides.build
+.PHONY : CMakeFiles/ClionProjects.dir/HogFeature.cpp.o.provides
+
+CMakeFiles/ClionProjects.dir/HogFeature.cpp.o.provides.build: CMakeFiles/ClionProjects.dir/HogFeature.cpp.o
+
+
+CMakeFiles/ClionProjects.dir/DataSetManager.cpp.o: CMakeFiles/ClionProjects.dir/flags.make
+CMakeFiles/ClionProjects.dir/DataSetManager.cpp.o: ../DataSetManager.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/manish/ClionProjects/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/ClionProjects.dir/DataSetManager.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ClionProjects.dir/DataSetManager.cpp.o -c /home/manish/ClionProjects/DataSetManager.cpp
+
+CMakeFiles/ClionProjects.dir/DataSetManager.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ClionProjects.dir/DataSetManager.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/manish/ClionProjects/DataSetManager.cpp > CMakeFiles/ClionProjects.dir/DataSetManager.cpp.i
+
+CMakeFiles/ClionProjects.dir/DataSetManager.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ClionProjects.dir/DataSetManager.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/manish/ClionProjects/DataSetManager.cpp -o CMakeFiles/ClionProjects.dir/DataSetManager.cpp.s
+
+CMakeFiles/ClionProjects.dir/DataSetManager.cpp.o.requires:
+
+.PHONY : CMakeFiles/ClionProjects.dir/DataSetManager.cpp.o.requires
+
+CMakeFiles/ClionProjects.dir/DataSetManager.cpp.o.provides: CMakeFiles/ClionProjects.dir/DataSetManager.cpp.o.requires
+	$(MAKE) -f CMakeFiles/ClionProjects.dir/build.make CMakeFiles/ClionProjects.dir/DataSetManager.cpp.o.provides.build
+.PHONY : CMakeFiles/ClionProjects.dir/DataSetManager.cpp.o.provides
+
+CMakeFiles/ClionProjects.dir/DataSetManager.cpp.o.provides.build: CMakeFiles/ClionProjects.dir/DataSetManager.cpp.o
+
+
 # Object files for target ClionProjects
 ClionProjects_OBJECTS = \
 "CMakeFiles/ClionProjects.dir/main.cpp.o" \
-"CMakeFiles/ClionProjects.dir/fontHeader.cpp.o"
+"CMakeFiles/ClionProjects.dir/fontHeader.cpp.o" \
+"CMakeFiles/ClionProjects.dir/HogFeature.cpp.o" \
+"CMakeFiles/ClionProjects.dir/DataSetManager.cpp.o"
 
 # External object files for target ClionProjects
 ClionProjects_EXTERNAL_OBJECTS =
 
 ClionProjects: CMakeFiles/ClionProjects.dir/main.cpp.o
 ClionProjects: CMakeFiles/ClionProjects.dir/fontHeader.cpp.o
+ClionProjects: CMakeFiles/ClionProjects.dir/HogFeature.cpp.o
+ClionProjects: CMakeFiles/ClionProjects.dir/DataSetManager.cpp.o
 ClionProjects: CMakeFiles/ClionProjects.dir/build.make
 ClionProjects: /usr/local/lib/libopencv_cudabgsegm.so.3.3.0
 ClionProjects: /usr/local/lib/libopencv_cudaobjdetect.so.3.3.0
@@ -175,7 +227,7 @@ ClionProjects: /usr/local/lib/libopencv_imgproc.so.3.3.0
 ClionProjects: /usr/local/lib/libopencv_core.so.3.3.0
 ClionProjects: /usr/local/lib/libopencv_cudev.so.3.3.0
 ClionProjects: CMakeFiles/ClionProjects.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/manish/ClionProjects/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable ClionProjects"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/manish/ClionProjects/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable ClionProjects"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ClionProjects.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -185,6 +237,8 @@ CMakeFiles/ClionProjects.dir/build: ClionProjects
 
 CMakeFiles/ClionProjects.dir/requires: CMakeFiles/ClionProjects.dir/main.cpp.o.requires
 CMakeFiles/ClionProjects.dir/requires: CMakeFiles/ClionProjects.dir/fontHeader.cpp.o.requires
+CMakeFiles/ClionProjects.dir/requires: CMakeFiles/ClionProjects.dir/HogFeature.cpp.o.requires
+CMakeFiles/ClionProjects.dir/requires: CMakeFiles/ClionProjects.dir/DataSetManager.cpp.o.requires
 
 .PHONY : CMakeFiles/ClionProjects.dir/requires
 

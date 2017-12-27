@@ -14,7 +14,8 @@
 #include <sys/types.h>
 #include <dirent.h>
 #include <cstdlib>
-
+#include <fstream>
+#include <sstream>
 
 
 using namespace cv;
@@ -24,10 +25,64 @@ using namespace std;
 #define KFOLD 5
 #define WIDTH 28
 #define AREA 784
-#define TRAINPATH "/home/manish/ClionProjects/data/train/"
+#define TRAINPATH string("/home/manish/ClionProjects/data/")
 void read_directory(const std::string& name, vector<string>& svec);
 void shuffleArray(vector<int> &array,const int size);
 vector<int> kfold( const int size, const int k, vector<int> &trainInd,vector<int> & valInd );
-short* getLabel(const vector<int> &data, const vector<string> &files);
-float** getData(const vector<string> &files, const vector<int> &indices);
+void getLabel(const vector<int> &data, const vector<string> &files, Mat &inputMat);
+void getData(const vector<string> &files, const vector<int> &indices, Mat &inputMat);
+void SVMevaluate(Mat &testResponse, float &count, float &accuracy, Mat &testLabels);
+void SVMevaluate(Mat &testResponse, float &count, float &accuracy, vector<int> &testLabels);
+void getSVMParams(SVM *svm);
+void computeHOG(vector<Mat> &inputCells, vector<vector<float> > &outputHOG);
+void ConvertVectortoMatrix(vector<vector<float> > &ipHOG, Mat & opMat);
+void SVMtrain(Mat &trainMat, vector<int> &trainLabels, Mat &testResponse, Mat &testMat);
+
+
+
+struct DataSet {
+    std::string filename;
+    float label;
+};
+
+class DataSetManager
+{
+private:
+    // user defined data member
+    float testDataPercent;
+    float validationDataPercent;
+
+    // derrived or internally calculated
+    int totalDataNum;
+    int totalTrainDataNum;
+    int totalTestDataNum;
+    int totalValidationDataNum;
+
+public:
+    //constructor
+    DataSetManager();
+
+    // setter and getter methods
+    void setTestDataPercent(float num);
+    void setValidationDataPercent(float num);
+
+    int getTotalDataNum();
+    int getTotalTrainDataNum();
+    int getTotalTestDataNum();
+    int getTotalValidationDataNum();
+
+    // primary functions of the class
+    void addData(std::string folderName, int classlabel);
+    void read();
+    void display();// displays the read file names for debugging
+    void distribute();
+    // ideally these are private; need to update
+    std::vector<DataSet> dataList;
+    std::vector<DataSet> TrainData;
+    std::vector<DataSet> TestData;
+    std::vector<DataSet> ValidationData;
+};
+
+
+
 #endif //CLIONPROJECTS_FONTHEADER_H

@@ -4,6 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/home/manish/ClionProjects/DataSetManager.cpp" "/home/manish/ClionProjects/cmake-build-debug/CMakeFiles/ClionProjects.dir/DataSetManager.cpp.o"
+  "/home/manish/ClionProjects/HogFeature.cpp" "/home/manish/ClionProjects/cmake-build-debug/CMakeFiles/ClionProjects.dir/HogFeature.cpp.o"
   "/home/manish/ClionProjects/fontHeader.cpp" "/home/manish/ClionProjects/cmake-build-debug/CMakeFiles/ClionProjects.dir/fontHeader.cpp.o"
   "/home/manish/ClionProjects/main.cpp" "/home/manish/ClionProjects/cmake-build-debug/CMakeFiles/ClionProjects.dir/main.cpp.o"
   )

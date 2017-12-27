@@ -6,6 +6,14 @@
 
 #IncludeRegexTransform: 
 
+/home/manish/ClionProjects/DataSetManager.cpp
+fontHeader.h
+/home/manish/ClionProjects/fontHeader.h
+
+/home/manish/ClionProjects/HogFeature.cpp
+fontHeader.h
+/home/manish/ClionProjects/fontHeader.h
+
 /home/manish/ClionProjects/fontHeader.cpp
 fontHeader.h
 /home/manish/ClionProjects/fontHeader.h
@@ -30,6 +38,10 @@ sys/types.h
 dirent.h
 -
 cstdlib
+-
+fstream
+-
+sstream
 -
 
 /home/manish/ClionProjects/main.cpp
